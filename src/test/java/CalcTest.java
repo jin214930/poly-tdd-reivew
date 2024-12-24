@@ -39,4 +39,22 @@ public class CalcTest {
     public void test6() {
         assertThat(Calc.run("1 / 1")).isEqualTo(1);
     }
+
+    @Test
+    @DisplayName("-1 + 1 == 0")
+    public void test7() {
+        assertThat(Calc.run("-1 + 1")).isEqualTo(0);
+    }
+
+    @Test
+    @DisplayName("1 + -1 == 0")
+    public void test8() {
+        assertThat(Calc.run("1 + -1")).isEqualTo(0);
+    }
+
+    @Test
+    @DisplayName("-1 + -1 == -2")
+    public void test9() {
+        assertThat(Calc.run("-1 + -1")).isEqualTo(-2);
+    }
 }

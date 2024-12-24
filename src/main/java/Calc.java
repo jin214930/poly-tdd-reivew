@@ -8,7 +8,7 @@ public class Calc {
                 case '+':
                     return run(exp.substring(0, i)) + run(exp.substring(i + 1));
                 case '-':
-                    if (i == 0)
+                    if (i == 0 || !Character.isDigit(exp.charAt(i - 1)))
                         continue;
                     return run(exp.substring(0, i)) - run(exp.substring(i + 1));
                 case '*':
